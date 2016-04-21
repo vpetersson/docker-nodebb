@@ -11,7 +11,7 @@ DBPORT = 27017
 CONFIGFILE = '/opt/nodebb/config.json'
 
 
-if not (SECRET or DBSERVERS):
+if not (SECRET and DBSERVERS):
     print 'Missing SECRET or DBSERVERS environment variable. Exiting.'
     sys.exit(1)
 
